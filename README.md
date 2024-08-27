@@ -21,7 +21,7 @@ A simple script to install v2fly or xray on Ubuntu or Debian servers.
 On your server run the following command:
 
 ```bash
-curl -o v2ray.sh https://raw.githubusercontent.com/mehrshadafarin/v2ray-installer/master/v2ray.sh && bash v2ray.sh
+curl -o v2ray.sh https://raw.githubusercontent.com/mehrshadafarin/v2ray-installer/main/v2ray.sh && bash v2ray.sh
 ```
 At first, it installs v2fly/xray as service and then it shows you options to manage it.
 
