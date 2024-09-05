@@ -23,7 +23,7 @@ function install_v2ray {
 	echo "4) arm-v6"
 	echo "5) arm-v7a"
 	echo "6) arm-v8a"
-	read -r -p "Select your architecture: " -e -i $arch arch
+	# read -r -p "Select your architecture: " -e -i $arch arch
 	case $arch in
 	1) arch="32" ;;
 	2) arch="64" ;;
@@ -37,10 +37,11 @@ function install_v2ray {
 		;;
 	esac
 	# Ask for xray or v2fly
-	local xray_or_v2fly
-	echo "1) xray"
-	echo "2) v2fly"
-	read -r -p "What do you want to install? " -e -i 1 xray_or_v2fly
+	local xray_or_v2fly=1
+	# local xray_or_v2fly
+	# echo "1) xray"
+	# echo "2) v2fly"
+	# read -r -p "What do you want to install? " -e -i 1 xray_or_v2fly
 	# Now download the executable
 	local url
 	case $xray_or_v2fly in
@@ -671,7 +672,7 @@ function main_menu {
 # Check if v2ray is installed
 if [ ! -f /usr/local/etc/v2ray/config.json ]; then
 	echo "It looks like that v2ray is not installed on your system."
-	read -n 1 -s -r -p "Press any key to install it or Ctrl+C to cancel..."
+	# read -n 1 -s -r -p "Press any key to install it or Ctrl+C to cancel..."
 	install_v2ray
 fi
 
