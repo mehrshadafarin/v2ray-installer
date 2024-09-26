@@ -674,11 +674,13 @@ if [ ! -f /usr/local/etc/v2ray/config.json ]; then
 	echo "It looks like that v2ray is not installed on your system."
 	# read -n 1 -s -r -p "Press any key to install it or Ctrl+C to cancel..."
 	install_v2ray
+else
+	# Open main menu
+	clear
+	echo "V2Fly/Xray installer script by Hirbod Behnam"
+	echo "Source at https://github.com/HirbodBehnam/V2Ray-Installer"
+	echo
+	main_menu
 fi
 
-# Open main menu
-clear
-echo "V2Fly/Xray installer script by Hirbod Behnam"
-echo "Source at https://github.com/HirbodBehnam/V2Ray-Installer"
-echo
-main_menu
+
